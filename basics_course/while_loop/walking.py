@@ -1,4 +1,5 @@
 day_target = 10000
+total_day_steps_counter = 0
 while current_steps != 'Going home':
     steps = int(current_steps)
     total_day_steps_counter += steps
