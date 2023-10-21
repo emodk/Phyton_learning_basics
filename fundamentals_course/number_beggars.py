@@ -1,10 +1,15 @@
 number_string = input()
 number_of_beggars = int(input())
-number_list = number_string.split(', ')
+list_from_number_string = number_string.split(', ')
 int_num_list = []
-n = 0
-for i in number_list:
+beggar_result_list = []
+for i in list_from_number_string:
     n = int(i)
     int_num_list.append(n)
-for j in range(number_of_beggars):
-    for k in range(len(int_num_list)):
+for j in range(1, number_of_beggars + 1):
+    beggar_list = list()
+    for k in range(j - 1, len(int_num_list), number_of_beggars):
+        beggar_list.append(int_num_list[k])
+    beggar_result = sum(beggar_list)
+    beggar_result_list.append(beggar_result)
+print(beggar_result_list)
