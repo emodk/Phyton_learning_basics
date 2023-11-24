@@ -10,6 +10,7 @@ while course_info != "end":
         courses[course_name].append(student_name)
     course_info = input()
 for key in courses:
-    print(f'{key}: {len(courses[key])}')
+    key_1 = key[:-1] + ":"
+    print(f'{key_1} {len(courses[key])}')
     for i in range(len(courses[key])):
-        print(f"-- {courses[key][i]}")
+        print(f"--{courses[key][i]}")
